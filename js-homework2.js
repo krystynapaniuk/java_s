@@ -1,16 +1,17 @@
-var a = '10km'
-switch (a)
+var amount =  7
+var UnitOfMeasure = 'kilograms'
+switch (UnitOfMeasure)
 {
-    case '10km':
-        console.log('10000m')
+    case 'kilometers':
+        console.log(amount, 'km is', amount * 1000, 'm')
         break;
-    case '1h':
-        console.log('60m')
+    case 'hours':
+        console.log(amount, 'h is', amount * 60, 'min')
         break;
-    case '1kg':
-        console.log('1000g')
+    case 'kilograms':
+        console.log(amount, 'kg is', amount * 1000, 'gr')
         break;
     default:
-        console.log('error')
+        console.log('Error.There is no such unit of measure')
 }
 
