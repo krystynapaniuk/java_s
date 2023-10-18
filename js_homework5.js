@@ -29,7 +29,7 @@ function checkProbabilityTheory(count) {
     let oddCount = 0;
     for (let i = 0; i < count; i++) {
         const randomNumber =
-            Math.floor(Math.random() * 1001); //готова матем функція генерації чисел
+            Math.floor(Math.random() * 901) + 100; //махінації з діапазоном
         if (randomNumber % 2 === 0) {
             evenCount++
         } else {
