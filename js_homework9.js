@@ -1,11 +1,3 @@
-//Task 1
-
-/*var str = "CAndy_neclace"
-var re = /[^Aa]{6}/ //6 символів
-//var re = /[^Aa]{6,}/ більше 6 символів
-console.log(str.match(re));*/
-
-//===================================================================================
 
 //Task 2
 var arr = [
@@ -22,21 +14,18 @@ var arr = [
     {
         userName:"Andrii",
         lastName:"",
-        email:"andrii@mail.ru" // Нам такі не підходять
+        email:"andrii@mail.ru"
     },
 ];
 
 function validEmail(email) {
-    var re = /^[A-Za-z0-9-]{4,6}\.[A-Za-z0-9-]{4,7}@[a-z]{3}$/;
-    var domain = email.split('@')[1];
-    if (re.test(email) && domain !== 'mail.ru') {
+    var re =  /^[A-Za-z0-9_]{4,6}\.[A-Za-z0-9_]{4,7}@(gmail\.com|yahoo\.com)$/; // мені сказали, що в куску @(gmail\.com|yahoo\.com) немає сенсу
+    var domain = email.split("@")[1];                                           // бо в перемінній domain є ця перевірка
+    if (re.test(email) && (domain === "gmail.com" || domain === "yahoo.com")) {
         return true;
     }
     return false;
 }
 
-var email = "dmitro.porohov@yahoo.com";
+var email = "test.test@gmail.com";
 console.log(validEmail(email));
-
-
- // var str = /^[a-zA-Z0-9_]+\.[a-zA-Z0-9_]+$/; зробила валідацію окремо для імейла до "@"
